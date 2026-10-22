@@ -14,6 +14,23 @@ Run it from the project root; the path is relative to the skill directory. The s
 ## KoliBri MCP server
 
 Endpoint: `https://public-ui-kolibri-mcp.vercel.app/mcp` (HTTP), locally `npx @public-ui/mcp` (stdio).
+The landing page <https://public-ui-kolibri-mcp.vercel.app/> holds everything relevant: setup for VS
+Code Copilot and Claude Desktop, local installation and the content inventory (samples, specs,
+scenarios, docs).
+
+Setup from scratch (pi):
+
+```bash
+pi mcp add kolibri --url https://public-ui-kolibri-mcp.vercel.app/mcp
+pi mcp list   # shows the server with its 6 tools
+```
+
+Locally instead of hosted: `pi mcp add kolibri -- npx -y @public-ui/mcp`. A running session picks
+the server up on restart; in the session, `mcp({ server: "kolibri" })` lists the tools.
+
+Alternative with the pi-mcp-adapter package: put the same URL as a plain entry into
+`~/.pi/agent/mcp-adapter.json` under `mcpServers` – the tools then run through the `mcp` gateway
+instead of `pi mcp list`.
 
 | Tool                                 | Purpose                                        |
 | ------------------------------------ | ---------------------------------------------- |
