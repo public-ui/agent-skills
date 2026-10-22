@@ -14,6 +14,9 @@ Run it from the project root; the path is relative to the skill directory. The s
 ## KoliBri MCP server
 
 Endpoint: `https://public-ui-kolibri-mcp.vercel.app/mcp` (HTTP), locally `npx @public-ui/mcp` (stdio).
+The landing page <https://public-ui-kolibri-mcp.vercel.app/> holds everything relevant about the
+server: setup for common MCP clients, local installation and the content inventory (samples, specs,
+scenarios, docs).
 
 | Tool                                 | Purpose                                        |
 | ------------------------------------ | ---------------------------------------------- |
